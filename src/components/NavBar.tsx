@@ -5,14 +5,15 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const NavBar = () => {
   return (
     < NavbarSection>
-      <div>
-        <h1>myteam</h1>
+      <div className='contents'>
         <nav>
+          <h1>myteam</h1>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/About">About</a></li>
+            <li><a href="/">home</a></li>
+            <li><a href="/About">about</a></li>
           </ul>
         </nav>
+        <button>Contact us</button>
       </div>
     </ NavbarSection>
   )
@@ -20,17 +21,30 @@ const NavBar = () => {
 
 const NavbarSection = styled.div`
 
+.contents{
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
+  justify-content: space-between;
+  color: white;
+  nav{
+    display: flex;
+    align-items: baseline;
 
-
-  h1 {
-    font-size: 1.5rem;
-    color: #333;
+    ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+    }
+    li{
+      text-decoration: none;
+    }
+    a{
+      color: white;
+    }
   }
+}
 
 
 `
