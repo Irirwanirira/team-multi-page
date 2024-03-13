@@ -14,8 +14,7 @@ const About = () => {
 }
 
 const AboutSection = styled.div`
-
- 
+    
 `
 
 export default About
