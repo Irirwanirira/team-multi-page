@@ -1,50 +1,115 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [menuVisible, setMenuVisible] = useState(false);
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   return (
-    < NavbarSection>
-      <div className='contents'>
-        <nav>
-          <h1>myteam</h1>
+    <NavbarSection>
+      <header>
+      <nav className="navbar">
+        <h1>myteam</h1>
+        <ul >
+          <li><a href="/">home</a></li>
+          <li><a href="/about">about</a></li>
+        </ul>
+      </nav>
+      <button className="contactBtn">Contact us</button>
+
+      <div className="menu">
+        <button className="menuContainer" onClick={toggleMenu}>
+          {
+            !menuVisible? (
+              <img src="../../assets/icon-hamburger.svg" alt="" />
+            ): (
+              <img src="../../assets/icon-close.svg" alt="" />
+            )
+          }
+        </button>
+
+        {
+          menuVisible && 
           <ul>
             <li><a href="/">home</a></li>
-            <li><a href="./about">about</a></li>
+            <li><a href="/about">about</a></li>
           </ul>
-        </nav>
-        <button>Contact us</button>
-      </div>
-    </ NavbarSection>
-  )
-}
+        }
+
+      </div>     
+
+      </header>
+        
+    </NavbarSection>
+  );
+};
 
 const NavbarSection = styled.div`
 
-.contents{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-  nav{
+
+  header {
     display: flex;
     align-items: baseline;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
 
-    ul{
-      display: flex;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    list-style: none;
+    ul {
+      display: flex; 
       align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      list-style: none;
-    }
-    li{
-      text-decoration: none;
-    }
-    a{
-      color: white;
+      justify-content: space-around;
+    li {
+      list-style: none;;
+      margin: 0 1rem;
+      }
     }
   }
-}
+  .contactBtn{
+    
+  }
+
+  .menu{
+    display: none;
+  }
+
+  @media only screen and (max-width: 640px) {
+
+    .navbar ul{
+      display: none;
+    }
+    .contactBtn{
+      display: none;
+    }
+    .menu{
+      display: block;
+      position: relative;
+      button{
+        border: none;
+      }
+      ul{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 40%;
+        li{
+          list-style: none;
+          margin: 1rem 0;
+          text-decoration: underline;
+        }
+      }
 
 
-`
+    }
+   
+  }
+`;
 
-export default NavBar
+export default NavBar;

@@ -79,12 +79,12 @@ const Home = () => {
                 </p>
               </div>
             </div>
-            <img
-              src="../../assets/bg-pattern-home-3.svg"
-              alt="home-3"
-              className="home-3"
-            />
           </div>
+          <img
+            src="../../assets/bg-pattern-home-3.svg"
+            alt="home-3"
+            className="home-3"
+          />
         </div>
         <div className="third_view">
           <img
@@ -152,10 +152,18 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <img src="../../assets/bg-pattern-home-5.svg" alt="home_5" className="home_5" />
+          <img
+            src="../../assets/bg-pattern-home-5.svg"
+            alt="home_5"
+            className="home_5"
+          />
         </div>
         <section className="pink_section">
-          <img src="../../assets/bg-pattern-home-6-about-5.svg" alt="home_5" className="home_5"/>
+          <img
+            src="../../assets/bg-pattern-home-6-about-5.svg"
+            alt="home_5"
+            className="home_5"
+          />
           <h1>Ready to Get started? </h1>
           <button>contact us</button>
         </section>
@@ -164,11 +172,15 @@ const Home = () => {
             <div className="team">
               <h1>myteam</h1>
               <ul className="links">
-              <li><a href="/">home</a></li>
-              <li><a href="/About">about</a></li>
+                <li>
+                  <a href="/">home</a>
+                </li>
+                <li>
+                  <a href="/About">about</a>
+                </li>
               </ul>
             </div>
-            <div>
+            <div className="address">
               <ul>
                 <li>987 hill crest lane</li>
                 <li>Irving, CA</li>
@@ -183,9 +195,7 @@ const Home = () => {
               <img src="../../assets/icon-pinterest.svg" alt="pinterest" />
               <img src="../../assets/icon-twitter.svg" alt="twitter" />
             </div>
-            <p>
-              Copyright 2020. All Rights Reserved
-            </p>
+            <p>Copyright 2020. All Rights Reserved</p>
           </div>
         </footer>
       </div>
@@ -248,7 +258,7 @@ const HomeSection = styled.div`
       max-width: 25%;
       .short_line {
         width: 3rem;
-        height: 2px;
+        height: 2.5px;
         background-color: #f38799;
       }
       h2 {
@@ -321,7 +331,7 @@ const HomeSection = styled.div`
           font-style: italic;
         }
         .image_container {
-          background-color: #04afbe;
+          background-color: #ecfdff;
           width: 4rem;
           height: 4rem;
           border-radius: 50%;
@@ -336,49 +346,49 @@ const HomeSection = styled.div`
       }
     }
 
-    .home_5{
+    .home_5 {
       position: absolute;
       right: 0;
       bottom: 0;
     }
   }
-  
-  .pink_section{
-    background-color:  #f38799;
-    padding: 3rem  12rem 0 12rem; 
+
+  .pink_section {
+    background-color: #f38799;
+    padding: 3rem 12rem 0 12rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
     color: #012f33;
-    button{
+    button {
       background-color: #f38799;
       border: 2px solid #012f33;
       color: #012f33;
     }
-    img{
+    img {
       position: absolute;
       left: 0;
     }
   }
 
-  .footer_section{
+  .footer_section {
     background-color: #012f33;
     padding: 1rem 12rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .left_of_footer{
+    .left_of_footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10rem;
-      .team{
+      .team {
         display: flex;
         flex-direction: column;
         align-items: start;
-        justify-content: start
+        justify-content: start;
       }
-      .links{
+      .links {
         padding: 0;
         display: flex;
         align-items: center;
@@ -386,20 +396,20 @@ const HomeSection = styled.div`
         gap: 5rem;
         color: white;
       }
-      ul{
+      ul {
         list-style: none;
         color: #4f7275;
-        li{
+        li {
           margin-bottom: 1rem;
         }
       }
     }
 
-    .right_of_footer{
+    .right_of_footer {
       display: flex;
       flex-direction: column;
       color: #4f7275;
-      .social_icons{
+      .social_icons {
         align-self: flex-end;
         display: flex;
         align-items: center;
@@ -407,5 +417,257 @@ const HomeSection = styled.div`
       }
     }
   }
+
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    .first_view {
+      padding: 0 2rem;
+      height: 80vh;
+      .home-1 {
+        display: none;
+      }
+      .body_part {
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          max-width: 50%;
+          text-align: center;
+        }
+        .content {
+          max-width: 100%;
+          text-align: center;
+          .short_line {
+            display: none;
+          }
+          p {
+            margin: auto;
+            width: 70%;
+          }
+        }
+      }
+    }
+    .second_view {
+      padding: 2rem;
+      flex-direction: column;
+      .build_side {
+        max-width: 70%;
+        h2 {
+          font-size: 2em;
+        }
+      }
+      .character {
+        max-width: 80%;
+      }
+      .home-3 {
+        bottom: -10%;
+      }
+    }
+    .third_view {
+      padding: 2rem;
+      .home-4 {
+        bottom: 92%;
+      }
+      .introduction {
+        max-width: 80%;
+        margin: 3rem auto;
+      }
+      .middle_content {
+        flex-direction: column;
+        max-width: 80%;
+        margin: auto;
+        gap: 2rem;
+        .card {
+          .text {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .pink_section {
+      padding: 2rem;
+      justify-content: space-around;
+      h1{
+        font-size: 30px;
+      }
+
+      button {
+        padding: 0%.5 2rem;
+      }
+      img {
+        position: absolute;
+        left: 0;
+        bottom: -220.5%;
+        z-index: 0;
+        width: 15%;
+      }
+    }
+    .footer_section {
+      padding: 1rem 2rem;
+      z-index: 10;
+      display: block;
+      .left_of_footer {
+        gap: 2rem;
+        .team {
+          gap: 1rem;
+        }
+      }
+      .right_of_footer {
+        display: flex;
+        /* align-items: baseline; */
+        justify-content: center;
+        align-items: center;
+        .social_icons {
+          align-self: flex-start;
+        }
+        p{
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 640px) {
+    
+    .first_view {
+      padding: 0 1rem;
+      height: 100vh;
+      .home-1 {
+        display: none;
+      }
+      .body_part {
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          max-width: 50%;
+          text-align: center;
+        }
+        .content {
+          max-width: 100%;
+          text-align: center;
+          .short_line {
+            display: none;
+          }
+          p {
+            margin: auto;
+            width: 70%;
+          }
+        }
+      }
+    }
+    .second_view {
+      padding: 2rem;
+      flex-direction: column;
+      .build_side {
+        max-width: 70%;
+        .short_line{
+          height: 0.5rem;
+          width: 3.5rem;
+        }
+        h2 {
+          line-height: 1;
+        }
+      }
+      .character {
+        text-align: center;
+        margin: auto;
+        max-width: 100%;
+        .small_card{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1rem;
+          margin: auto;
+     
+          .title{
+            font-size: 1.5em;
+            font-weight: bold;
+          }
+          .content{
+            font-size: 1.5em;
+          }
+        }
+      }
+      .home-3 {
+        bottom: -30%;
+      }
+    }
+    .third_view {
+      padding: 2rem;
+      .home-4 {
+        bottom: 94.3%;
+      }
+      .introduction {
+        max-width: 90%;
+        margin: 6rem auto;
+      }
+      .middle_content {
+        flex-direction: column;
+        font-weight: bold;
+        margin: auto;
+        gap: 2rem;
+        .card {
+          .text {
+            width: 100%;
+          }
+          .image_container{
+            width: 5rem;
+            height: 5rem;
+            padding: 0.2rem;
+          }
+        }
+      }
+    }
+    .pink_section {
+      padding: 2rem;
+      justify-content: space-around;
+      flex-direction: column;
+      h1{
+        font-size: 30px;
+      }
+
+      button {
+        padding: 0%.5 2rem;
+      }
+      img {
+        position: absolute;
+        left: 0;
+        bottom: -356%;
+        width: 35%;
+      }
+    }
+    .footer_section {
+      padding: 1rem 2rem;
+      flex-direction: column;
+      .left_of_footer {
+        flex-direction: column;
+        gap: 2rem;
+        .links{
+          padding: 0;
+          margin: 0;
+        }
+        .address ul{
+          padding: 0;
+          margin: 0;
+          text-align: center;
+          font-size: 20px;
+          font-weight: border;
+        }
+      }
+      .right_of_footer {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .social_icons {
+          align-self: center;
+        }
+
+      }
+
+    }
+  }
 `;
+
 export default Home;
