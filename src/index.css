@@ -40,10 +40,15 @@ button {
   font-family: inherit;
   background-color: #024c52;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
 }
 button:hover {
-  border-color: white;;
+  transform: translateY(10px);
+  background-color: #f38799;
+  color: #024c52;
 }
 
 

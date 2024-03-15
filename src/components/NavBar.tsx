@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
+import styles from '../animations.module.css'
 
 const NavBar = () => {
   const [menuVisible, setMenuVisible] = useState(false);

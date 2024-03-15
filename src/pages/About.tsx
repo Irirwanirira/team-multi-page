@@ -19,14 +19,14 @@ const About = () => {
             </div>
           </div>
           <img
-            src="../../assets/bg-pattern-home-2.svg"
+            src="/assets/bg-pattern-home-2.svg"
             alt="home-2"
             className="home-2"
           />
         </div>
         <div className="about_second_view">
           <img
-            src="../../assets/bg-pattern-about-2-contact-1.svg"
+            src="/assets/bg-pattern-about-2-contact-1.svg"
             alt="image-about-1"
             className="image-2"
           />
@@ -35,7 +35,7 @@ const About = () => {
             <div className="card_collections">
               <div className="card">
                 <div className="image_container">
-                  <img src="../../assets/avatar-cruz.jpg" alt="avatar-cruz" />
+                  <img src="/assets/avatar-cruz.jpg" alt="avatar-cruz" />
                 </div>
 
                 <h2>Cruz Hamer</h2>
@@ -45,7 +45,7 @@ const About = () => {
               <div className="card">
                 <div className="image_container">
                   <img
-                    src="../../assets/avatar-christian.jpg"
+                    src="/assets/avatar-christian.jpg"
                     alt="avatar-christian"
                   />
                 </div>
@@ -55,7 +55,7 @@ const About = () => {
               </div>
               <div className="card">
                 <div className="image_container">
-                  <img src="../../assets/avatar-cruz.jpg" alt="avatar-cruz" />
+                  <img src="/assets/avatar-cruz.jpg" alt="avatar-cruz" />
                 </div>
                 <h2>Cruz Hamer</h2>
                 <p>COO</p>
@@ -63,7 +63,7 @@ const About = () => {
               </div>
               <div className="card">
                 <div className="image_container">
-                  <img src="../../assets/avatar-cruz.jpg" alt="avatar-cruz" />
+                  <img src="/assets/avatar-cruz.jpg" alt="avatar-cruz" />
                 </div>
                 <h2>Cruz Hamer</h2>
                 <p>COO</p>
@@ -71,7 +71,7 @@ const About = () => {
               </div>
               <div className="card">
                 <div className="image_container">
-                  <img src="../../assets/avatar-cruz.jpg" alt="avatar-cruz" />
+                  <img src="/assets/avatar-cruz.jpg" alt="avatar-cruz" />
                 </div>
                 <h2>Cruz Hamer</h2>
                 <p>COO</p>
@@ -84,29 +84,33 @@ const About = () => {
                   start and let them follow it"
                 </p>
                 <div className="social_icons">
-                  <img src="../../assets/icon-facebook.svg" alt="facebook" />
-                  <img src="../../assets/icon-twitter.svg" alt="twitter" />
+                  <img src="/assets/icon-facebook.svg" alt="facebook" />
+                  <img src="/assets/icon-twitter.svg" alt="twitter" />
                 </div>
                 <button>x</button>
               </div>
             </div>
           </div>
           <img
-            src="../../assets/bg-pattern-home-4-about-3.svg"
+            src="/assets/bg-pattern-home-4-about-3.svg"
             alt="about-3"
             className="about-3"
           />
         </div>
         <section className="about_third_section">
-          <img src="../../assets/bg-pattern-about-4.svg" alt="" />
+          <img
+            src="/assets/bg-pattern-about-4.svg"
+            alt="pattern-about-4.svg"
+            className="image-4"
+          />
           <div className="contents">
             <h1>Some of our clients</h1>
             <div className="partners">
-              <img src="../../assets/logo-the-verge.png" alt="" />
-              <img src="../../assets/logo-jakarta-post.png" alt="" />
-              <img src="../../assets/logo-the-guardian.png" alt="" />
-              <img src="../../assets/logo-tech-radar.png" alt="" />
-              <img src="../../assets/logo-gadgets-now.png" alt="" />
+              <img src="/assets/logo-the-verge.png" alt="" />
+              <img src="/assets/logo-jakarta-post.png" alt="" />
+              <img src="/assets/logo-the-guardian.png" alt="" />
+              <img src="/assets/logo-tech-radar.png" alt="" />
+              <img src="/assets/logo-gadgets-now.png" alt="" />
             </div>
           </div>
         </section>
@@ -132,7 +136,7 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="address">
               <ul>
                 <li>987 hill crest lane</li>
                 <li>Irving, CA</li>
@@ -265,14 +269,28 @@ const AboutSection = styled.div`
   }
 
   .about_third_section {
+    padding: 0 12rem;
+    height: 50vh;
+    position: relative;
     background-color: #032427;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .image-4 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     .contents {
-      padding: 0 12rem 5rem 12rem;
       text-align: center;
+      h1 {
+        margin: 0;
+      }
       .partners {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        gap: 3em;
         img {
           width: 15%;
         }
@@ -280,11 +298,12 @@ const AboutSection = styled.div`
     }
   }
   .pink_section {
+    position: relative;
     background-color: #f38799;
-    padding: 3rem 12rem 0 12rem;
+    height: 20vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     color: #012f33;
     button {
       background-color: #f38799;
@@ -294,6 +313,7 @@ const AboutSection = styled.div`
     img {
       position: absolute;
       left: 0;
+      bottom: 0;
     }
   }
 
@@ -340,6 +360,245 @@ const AboutSection = styled.div`
         display: flex;
         align-items: center;
         gap: 1rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 641px) and (max-width: 1007px) {
+    .first_view {
+      padding: 0 6rem;
+      position: relative;
+      background-color: #024c52;
+      height: 70vh;
+      .body_part {
+        padding-block: 5rem;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .about_second_view {
+      background-color: #013e44;
+      position: relative;
+
+      .content {
+        padding: 5rem 2rem;
+        text-align: center;
+        h1 {
+          font-size: 35px;
+        }
+        .card_collections {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          gap: 2rem;
+          margin-block: 4rem;
+          .card {
+            width: 100%;
+            grid-column: span 3;
+          }
+          .social_icons {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+
+    .about_third_section {
+      padding: 0 6rem;
+      height: 30vh;
+      .image-4 {
+        width: 15%;
+      }
+      .contents {
+        text-align: center;
+        h1 {
+          margin-block: 2rem;
+        }
+        .partners {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          gap: 3em;
+          img {
+            width: 15%;
+          }
+        }
+      }
+    }
+    .pink_section {
+      padding: 3rem;
+      justify-content: space-around;
+      h1 {
+        font-size: 30px;
+      }
+      button {
+        padding: 0.5rem 2rem;
+      }
+    }
+
+    .footer_section {
+      padding: 1rem 2rem;
+      display: block;
+      .left_of_footer {
+        gap: 2rem;
+        .team {
+          gap: 1rem;
+        }
+      }
+      .right_of_footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .social_icons {
+          align-self: flex-start;
+        }
+        p {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 641px) {
+    overflow: hidden;
+    .first_view {
+      padding: 0 3rem;
+      position: relative;
+      height: 90vh;
+      .body_part {
+        padding-top: 2rem;
+        flex-direction: column;
+        text-align: center;
+
+        h1 {
+          flex: 2;
+          color: white;
+          span {
+            color: #f38799;
+          }
+        }
+        .content {
+          flex: 2;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          div {
+            display: none;
+          }
+          p {
+            font-size: 25px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .about_second_view {
+      background-color: #013e44;
+      position: relative;
+
+      .content {
+        padding: 5rem 2rem;
+        text-align: center;
+        h1 {
+          font-size: 35px;
+        }
+
+        .card_collections {
+          display: grid;
+          grid-template-columns: repeat(6, 1fr);
+          gap: 2rem;
+          margin-block: 4rem;
+          .card {
+            width: 100%;
+            grid-column: span 3;
+          }
+          .social_icons {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+    .about_third_section {
+      padding: 0 12rem;
+      height: 30vh;
+      justify-content: space-between;
+
+      .image-4 {
+        width: 20%;
+      }
+      .contents {
+        text-align: center;
+        h1 {
+          font-size: 20px;
+          margin-block: 2rem;
+        }
+        .partners {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          gap: 2em;
+          img {
+            width: 35%;
+          }
+        }
+      }
+    }
+
+    .pink_section {
+      position: relative;
+      background-color: #f38799;
+      height: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #012f33;
+      h1 {
+        font-size: 30px;
+        margin-block: 2rem;
+      }
+      button {
+        background-color: #f38799;
+        border: 2px solid #012f33;
+        color: #012f33;
+      }
+      img {
+        width: 20%;
+      }
+    }
+
+    .footer_section {
+      padding: 1rem 2rem;
+      flex-direction: column;
+      .left_of_footer {
+        flex-direction: column;
+        gap: 2rem;
+        .links {
+          padding: 0;
+          margin: 0;
+        }
+        .address ul {
+          padding: 0;
+          margin: 0;
+          text-align: center;
+          font-size: 20px;
+          font-weight: border;
+        }
+      }
+      .right_of_footer {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .social_icons {
+          align-self: center;
+        }
       }
     }
   }

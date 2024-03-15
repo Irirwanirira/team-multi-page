@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
+import styles from '../animations.module.css'
 
 const Home = () => {
   return (
@@ -7,17 +8,18 @@ const Home = () => {
       <div>
         <div className="first_view">
           <img
-            src="../../assets/bg-pattern-home-1.svg"
+            src="/assets/bg-pattern-home-1.svg"
             alt="home-1"
             className="home-1"
           />
           <NavBar />
           <div className="body_part">
-            <h1>
-              Find the best <span>talent</span>
+            <h1 >
+              Find the best <span >talent</span>
             </h1>
             <div className="content">
-              <div className="short_line"></div>
+              <div className={`${styles.rotateLines} ${styles.animate} ${styles.animateInfinite} ${styles.animateOrigin} short_line`}>
+              </div>
               <p>
                 Finding the right people and building high performing teams can
                 be hard. most companies aren't topping the abudnace of global
@@ -26,20 +28,20 @@ const Home = () => {
             </div>
           </div>
           <img
-            src="../../assets/bg-pattern-home-2.svg"
+            src="/assets/bg-pattern-home-2.svg"
             alt="home-2"
             className="home-2"
           />
         </div>
         <div className="second_view">
           <div className="build_side">
-            <div className="short_line"></div>
+            <div className={`${styles.rotateLines} ${styles.animate} ${styles.animateInfinite} ${styles.animationSlow} short_line`}></div>
             <h2>Build & manage distributed teams like no one else.</h2>
           </div>
           <div className="character">
             <div className="small_card">
               <img
-                src="../../assets/icon-person.svg"
+                src="/assets/icon-person.svg"
                 alt=""
                 className="icon_holder"
               />
@@ -53,7 +55,7 @@ const Home = () => {
             </div>
             <div className="small_card">
               <img
-                src="../../assets/icon-person.svg"
+                src="/assets/icon-person.svg"
                 alt=""
                 className="icon_holder"
               />
@@ -67,7 +69,7 @@ const Home = () => {
             </div>
             <div className="small_card">
               <img
-                src="../../assets/icon-person.svg"
+                src="/assets/icon-person.svg"
                 alt=""
                 className="icon_holder"
               />
@@ -81,14 +83,14 @@ const Home = () => {
             </div>
           </div>
           <img
-            src="../../assets/bg-pattern-home-3.svg"
+            src="/assets/bg-pattern-home-3.svg"
             alt="home-3"
             className="home-3"
           />
         </div>
         <div className="third_view">
           <img
-            src="../../assets/bg-pattern-home-4-about-3.svg"
+            src="/assets/bg-pattern-home-4-about-3.svg"
             alt="home-4"
             className="home-4"
           />
@@ -99,7 +101,7 @@ const Home = () => {
           <div className="middle_content">
             <div className="card">
               <img
-                src="../../assets/icon-quotes.svg"
+                src="/assets/icon-quotes.svg"
                 alt="Quotations"
                 className="quotes"
               />
@@ -112,12 +114,12 @@ const Home = () => {
               <h4> Kady Baker</h4>
               <p className="position">Product designer at Bookmark</p>
               <div className="image_container">
-                <img src="../../assets/avatar-kady.jpg" alt="avatar image" />
+                <img src="/assets/avatar-kady.jpg" alt="avatar image" />
               </div>
             </div>
             <div className="card">
               <img
-                src="../../assets/icon-quotes.svg"
+                src="/assets/icon-quotes.svg"
                 alt="Quotations"
                 className="quotes"
               />
@@ -130,12 +132,12 @@ const Home = () => {
               <h4> Kady Baker</h4>
               <p className="position">Product designer at Bookmark</p>
               <div className="image_container">
-                <img src="../../assets/avatar-kady.jpg" alt="avatar image" />
+                <img src="/assets/avatar-kady.jpg" alt="avatar image" />
               </div>
             </div>
             <div className="card">
               <img
-                src="../../assets/icon-quotes.svg"
+                src="/assets/icon-quotes.svg"
                 alt="Quotations"
                 className="quotes"
               />
@@ -148,23 +150,23 @@ const Home = () => {
               <h4> Kady Baker</h4>
               <p className="position">Product designer at Bookmark</p>
               <div className="image_container">
-                <img src="../../assets/avatar-kady.jpg" alt="avatar image" />
+                <img src="/assets/avatar-kady.jpg" alt="avatar image" />
               </div>
             </div>
           </div>
           <img
-            src="../../assets/bg-pattern-home-5.svg"
+            src="/assets/bg-pattern-home-5.svg"
             alt="home_5"
             className="home_5"
           />
         </div>
         <section className="pink_section">
           <img
-            src="../../assets/bg-pattern-home-6-about-5.svg"
+            src="/assets/bg-pattern-home-6-about-5.svg"
             alt="home_5"
             className="home_5"
           />
-          <h1>Ready to Get started? </h1>
+          <h1 className={styles.getStarted}>Ready to Get started? </h1>
           <button>contact us</button>
         </section>
         <footer className="footer_section">
@@ -191,9 +193,9 @@ const Home = () => {
           </div>
           <div className="right_of_footer">
             <div className="social_icons">
-              <img src="../../assets/icon-facebook.svg" alt="facebook" />
-              <img src="../../assets/icon-pinterest.svg" alt="pinterest" />
-              <img src="../../assets/icon-twitter.svg" alt="twitter" />
+              <img src="/assets/icon-facebook.svg" alt="facebook" />
+              <img src="/assets/icon-pinterest.svg" alt="pinterest" />
+              <img src="/assets/icon-twitter.svg" alt="twitter" className={`${styles.bounce} ${styles.animate} ${styles.animateInfinite}`}/>
             </div>
             <p>Copyright 2020. All Rights Reserved</p>
           </div>
@@ -205,6 +207,7 @@ const Home = () => {
 
 const HomeSection = styled.div`
   .first_view {
+    overflow: hidden;
     padding: 0 12rem;
     position: relative;
     background-color: #024c52;
@@ -252,6 +255,7 @@ const HomeSection = styled.div`
     background-color: #012f33;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     .build_side {
       flex: 1;
@@ -285,20 +289,20 @@ const HomeSection = styled.div`
     .home-3 {
       position: absolute;
       right: 0;
-      bottom: -20%;
+      bottom: 0
     }
   }
 
   .third_view {
-    position: relative;
     padding: 6rem 12rem;
     background-color: #0c3c41;
     text-align: center;
+    position: relative;
 
     .home-4 {
       position: absolute;
       left: 0;
-      bottom: 87%;
+      top: 0;
     }
     .introduction {
       text-align: center;
@@ -360,14 +364,16 @@ const HomeSection = styled.div`
     align-items: center;
     justify-content: space-around;
     color: #012f33;
+    position: relative;
     button {
       background-color: #f38799;
       border: 2px solid #012f33;
       color: #012f33;
     }
-    img {
+    .home_5 {
       position: absolute;
       left: 0;
+      bottom: 0;
     }
   }
 
@@ -448,6 +454,7 @@ const HomeSection = styled.div`
     .second_view {
       padding: 2rem;
       flex-direction: column;
+      overflow: hidden;
       .build_side {
         max-width: 70%;
         h2 {
@@ -458,14 +465,13 @@ const HomeSection = styled.div`
         max-width: 80%;
       }
       .home-3 {
-        bottom: -10%;
+        top: 0;
+        right: -10%;
       }
     }
     .third_view {
       padding: 2rem;
-      .home-4 {
-        bottom: 92%;
-      }
+
       .introduction {
         max-width: 80%;
         margin: 3rem auto;
@@ -483,26 +489,17 @@ const HomeSection = styled.div`
       }
     }
     .pink_section {
-      padding: 2rem;
+      padding: 3rem;
       justify-content: space-around;
       h1{
         font-size: 30px;
       }
-
       button {
-        padding: 0%.5 2rem;
-      }
-      img {
-        position: absolute;
-        left: 0;
-        bottom: -220.5%;
-        z-index: 0;
-        width: 15%;
+        padding: 0.5rem 2rem;
       }
     }
     .footer_section {
       padding: 1rem 2rem;
-      z-index: 10;
       display: block;
       .left_of_footer {
         gap: 2rem;
@@ -512,7 +509,6 @@ const HomeSection = styled.div`
       }
       .right_of_footer {
         display: flex;
-        /* align-items: baseline; */
         justify-content: center;
         align-items: center;
         .social_icons {
@@ -556,6 +552,7 @@ const HomeSection = styled.div`
     .second_view {
       padding: 2rem;
       flex-direction: column;
+      overflow: hidden;
       .build_side {
         max-width: 70%;
         .short_line{
@@ -587,15 +584,13 @@ const HomeSection = styled.div`
           }
         }
       }
-      .home-3 {
-        bottom: -30%;
+      .home-3{
+        top: 0;
+        right: -15%;
       }
     }
     .third_view {
       padding: 2rem;
-      .home-4 {
-        bottom: 94.3%;
-      }
       .introduction {
         max-width: 90%;
         margin: 6rem auto;
@@ -619,19 +614,17 @@ const HomeSection = styled.div`
     }
     .pink_section {
       padding: 2rem;
-      justify-content: space-around;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
       h1{
         font-size: 30px;
       }
 
       button {
-        padding: 0%.5 2rem;
+        padding: 0.5em 2em;
       }
-      img {
-        position: absolute;
-        left: 0;
-        bottom: -356%;
+      .home_5 {
         width: 35%;
       }
     }
