@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const NavBar = () => {
@@ -33,8 +34,8 @@ const NavBar = () => {
         {
           menuVisible && 
           <ul>
-            <li><a href="/">home</a></li>
-            <li><a href="/about">about</a></li>
+            <li><Link to="/">home</Link></li>
+            <li><Link to="/about">about</Link></li>
           </ul>
         }
 
