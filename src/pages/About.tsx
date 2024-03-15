@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import NavBar from "../components/NavBar";
 
 const About = () => {
   return (
     <AboutSection>
       <div>
         <div className="first_view">
-          <NavBar />
           <div className="body_part">
             <h1>About</h1>
             <div className="content">

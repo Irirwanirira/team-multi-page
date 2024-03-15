@@ -11,45 +11,45 @@ const NavBar = () => {
   return (
     <NavbarSection>
       <header>
-      <nav className="navbar">
-        <h1>myteam</h1>
-        <ul >
-          <li><a href="/">home</a></li>
-          <li><a href="/about">about</a></li>
-        </ul>
-      </nav>
-      <button className="contactBtn">Contact us</button>
-
-      <div className="menu">
-        <button className="menuContainer" onClick={toggleMenu}>
-          {
-            !menuVisible? (
-              <img src="../../assets/icon-hamburger.svg" alt="" />
-            ): (
-              <img src="../../assets/icon-close.svg" alt="" />
-            )
-          }
-        </button>
-
-        {
-          menuVisible && 
+        <nav className="navbar">
+          <h1>myteam</h1>
           <ul>
-            <li><Link to="/">home</Link></li>
-            <li><Link to="/about">about</Link></li>
+            <li>
+              <a href="/">home</a>
+            </li>
+            <li>
+              <a href="/about">about</a>
+            </li>
           </ul>
-        }
+        </nav>
+        <button className="contactBtn">Contact us</button>
 
-      </div>     
+        <div className="menu">
+          <button className="menuContainer" onClick={toggleMenu}>
+            {!menuVisible ? (
+              <img src="../../assets/icon-hamburger.svg" alt="" />
+            ) : (
+              <img src="../../assets/icon-close.svg" alt="" />
+            )}
+          </button>
 
+          {menuVisible && (
+            <ul>
+              <li>
+                <Link to="/">home</Link>
+              </li>
+              <li>
+                <Link to="/about">about</Link>
+              </li>
+            </ul>
+          )}
+        </div>
       </header>
-        
     </NavbarSection>
   );
 };
 
 const NavbarSection = styled.div`
-
-
   header {
     display: flex;
     align-items: baseline;
@@ -63,53 +63,48 @@ const NavbarSection = styled.div`
     align-items: baseline;
     list-style: none;
     ul {
-      display: flex; 
+      display: flex;
       align-items: center;
       justify-content: space-around;
-    li {
-      list-style: none;;
-      margin: 0 1rem;
+      li {
+        list-style: none;
+        margin: 0 1rem;
       }
     }
   }
-  .contactBtn{
-    
+  .contactBtn {
   }
 
-  .menu{
+  .menu {
     display: none;
   }
 
   @media only screen and (max-width: 640px) {
-
-    .navbar ul{
+    .navbar ul {
       display: none;
     }
-    .contactBtn{
+    .contactBtn {
       display: none;
     }
-    .menu{
+    .menu {
       display: block;
       position: relative;
-      button{
+      button {
         border: none;
       }
-      ul{
+      ul {
         text-align: center;
         display: flex;
         flex-direction: column;
         position: absolute;
         right: 40%;
-        li{
+        li {
           list-style: none;
           margin: 1rem 0;
           text-decoration: underline;
         }
       }
-
-
     }
-   
   }
 `;
 
