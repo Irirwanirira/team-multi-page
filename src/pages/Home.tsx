@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import NavBar from "../components/NavBar";
 import styles from '../animations.module.css'
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
             alt="home-1"
             className="home-1"
           />
+          <NavBar />
           <div className="body_part">
             <h1 >
               Find the best <span >talent</span>
