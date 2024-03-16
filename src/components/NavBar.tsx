@@ -20,6 +20,9 @@ const NavBar = () => {
             <li>
               <a href="/about">about</a>
             </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
           </ul>
         </nav>
         <button className="contactBtn">Contact us</button>
