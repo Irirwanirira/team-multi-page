@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
 import styles from '../animations.module.css'
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -21,9 +22,7 @@ const Home = () => {
               <div className={`${styles.rotateLines} ${styles.animate} ${styles.animateInfinite} ${styles.animateOrigin} short_line`}>
               </div>
               <p>
-                Finding the right people and building high performing teams can
-                be hard. most companies aren't topping the abudnace of global
-                talent we are about to change that.
+              Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.
               </p>
             </div>
           </div>
@@ -169,37 +168,7 @@ const Home = () => {
           <h1 className={styles.getStarted}>Ready to Get started? </h1>
           <button>contact us</button>
         </section>
-        <footer className="footer_section">
-          <div className="left_of_footer">
-            <div className="team">
-              <h1>myteam</h1>
-              <ul className="links">
-                <li>
-                  <a href="/">home</a>
-                </li>
-                <li>
-                  <a href="/About">about</a>
-                </li>
-              </ul>
-            </div>
-            <div className="address">
-              <ul>
-                <li>987 hill crest lane</li>
-                <li>Irving, CA</li>
-                <li>California 94549</li>
-                <li>Call Us: 949-833-7432</li>
-              </ul>
-            </div>
-          </div>
-          <div className="right_of_footer">
-            <div className="social_icons">
-              <img src="/assets/icon-facebook.svg" alt="facebook" />
-              <img src="/assets/icon-pinterest.svg" alt="pinterest" />
-              <img src="/assets/icon-twitter.svg" alt="twitter" className={`${styles.bounce} ${styles.animate} ${styles.animateInfinite}`}/>
-            </div>
-            <p>Copyright 2020. All Rights Reserved</p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </HomeSection>
   );
@@ -227,7 +196,7 @@ const HomeSection = styled.div`
         flex: 2;
         color: white;
         span {
-          color: #f38799;
+          color: #f67e7e;
         }
       }
       .content {
@@ -237,9 +206,9 @@ const HomeSection = styled.div`
         flex-direction: column;
         justify-content: space-between;
         div {
-          height: 3px;
+          height: 5px;
           width: 3rem;
-          background-color: #d37db9;
+          background-color: #79cbc7;
         }
       }
     }
@@ -262,8 +231,8 @@ const HomeSection = styled.div`
       max-width: 25%;
       .short_line {
         width: 3rem;
-        height: 2.5px;
-        background-color: #f38799;
+        height: 5px;
+        background-color: #f67e7e;
       }
       h2 {
         font-size: 3em;
@@ -280,7 +249,7 @@ const HomeSection = styled.div`
           display: block;
         }
         .title {
-          color: #f38799;
+          color: #f67e7e;
         }
         .content {
         }
@@ -321,7 +290,6 @@ const HomeSection = styled.div`
         align-items: center;
         justify-content: center;
         .quotes {
-          /* width: 2rem; */
           margin-bottom: -2rem;
         }
         .text {
@@ -358,7 +326,7 @@ const HomeSection = styled.div`
   }
 
   .pink_section {
-    background-color: #f38799;
+    background-color: #f67e7e;
     padding: 3rem 12rem 0 12rem;
     display: flex;
     align-items: center;
@@ -366,7 +334,7 @@ const HomeSection = styled.div`
     color: #012f33;
     position: relative;
     button {
-      background-color: #f38799;
+      background-color: #f67e7e;
       border: 2px solid #012f33;
       color: #012f33;
     }
@@ -374,53 +342,6 @@ const HomeSection = styled.div`
       position: absolute;
       left: 0;
       bottom: 0;
-    }
-  }
-
-  .footer_section {
-    background-color: #012f33;
-    padding: 1rem 12rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .left_of_footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10rem;
-      .team {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
-      }
-      .links {
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 5rem;
-        color: white;
-      }
-      ul {
-        list-style: none;
-        color: #4f7275;
-        li {
-          margin-bottom: 1rem;
-        }
-      }
-    }
-
-    .right_of_footer {
-      display: flex;
-      flex-direction: column;
-      color: #4f7275;
-      .social_icons {
-        align-self: flex-end;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
     }
   }
 
@@ -498,34 +419,12 @@ const HomeSection = styled.div`
         padding: 0.5rem 2rem;
       }
     }
-    .footer_section {
-      padding: 1rem 2rem;
-      display: block;
-      .left_of_footer {
-        gap: 2rem;
-        .team {
-          gap: 1rem;
-        }
-      }
-      .right_of_footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .social_icons {
-          align-self: flex-start;
-        }
-        p{
-          align-self: flex-end;
-        }
-      }
-    }
   }
 
   @media only screen and (max-width: 640px) {
     
     .first_view {
       padding: 0 1rem;
-      height: 100vh;
       .home-1 {
         display: none;
       }
@@ -533,7 +432,9 @@ const HomeSection = styled.div`
         flex-direction: column;
         align-items: center;
         h1 {
-          max-width: 50%;
+          max-width: 70%;
+          margin: 0;
+          padding: 0;
           text-align: center;
         }
         .content {
@@ -541,10 +442,6 @@ const HomeSection = styled.div`
           text-align: center;
           .short_line {
             display: none;
-          }
-          p {
-            margin: auto;
-            width: 70%;
           }
         }
       }
@@ -614,13 +511,13 @@ const HomeSection = styled.div`
     }
     .pink_section {
       padding: 2rem;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
+      text-align: center;
+      z-index: 5;
       h1{
         font-size: 30px;
+        max-width: 50%;
       }
-
       button {
         padding: 0.5em 2em;
       }
@@ -628,38 +525,7 @@ const HomeSection = styled.div`
         width: 35%;
       }
     }
-    .footer_section {
-      padding: 1rem 2rem;
-      flex-direction: column;
-      .left_of_footer {
-        flex-direction: column;
-        gap: 2rem;
-        .links{
-          padding: 0;
-          margin: 0;
-        }
-        .address ul{
-          padding: 0;
-          margin: 0;
-          text-align: center;
-          font-size: 20px;
-          font-weight: border;
-        }
-      }
-      .right_of_footer {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        .social_icons {
-          align-self: center;
-        }
-
-      }
-
-    }
+    
   }
 `;
 

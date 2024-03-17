@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
@@ -12,17 +13,11 @@ const About = () => {
             <div className="content">
               <div className="short_line"></div>
               <p>
-                Finding the right people and building high performing teams can
-                be hard. most companies aren't topping the abudance of global
-                talent we are about to change that.
+                We help companies build dynamic teams made up of top global talent. Using our network of passionate professionals we drive innovation and deliver incredible outcomes. Talented, diverse teams shape the best products and experiences. We’ll bring those teams to you.
               </p>
             </div>
           </div>
-          <img
-            src="/assets/bg-pattern-home-2.svg"
-            alt="home-2"
-            className="home-2"
-          />
+          <img src="/assets/bg-pattern-about-1-mobile-nav-1.svg" alt="about_2-image" className="home-2"/>
         </div>
         <div className="about_second_view">
           <img
@@ -120,40 +115,10 @@ const About = () => {
             alt="home_5"
             className="home_5"
           />
-          <h1>Ready to Get started? </h1>
+          <h1>Ready to get started? </h1>
           <button>contact us</button>
         </section>
-        <footer className="footer_section">
-          <div className="left_of_footer">
-            <div className="team">
-              <h1>myteam</h1>
-              <ul className="links">
-                <li>
-                  <a href="/">home</a>
-                </li>
-                <li>
-                  <a href="/About">about</a>
-                </li>
-              </ul>
-            </div>
-            <div className="address">
-              <ul>
-                <li>987 hill crest lane</li>
-                <li>Irving, CA</li>
-                <li>California 94549</li>
-                <li>Call Us: 949-833-7432</li>
-              </ul>
-            </div>
-          </div>
-          <div className="right_of_footer">
-            <div className="social_icons">
-              <img src="../../assets/icon-facebook.svg" alt="facebook" />
-              <img src="../../assets/icon-pinterest.svg" alt="pinterest" />
-              <img src="../../assets/icon-twitter.svg" alt="twitter" />
-            </div>
-            <p>Copyright 2020. All Rights Reserved</p>
-          </div>
-        </footer>
+          <Footer />
       </div>
     </AboutSection>
   );
@@ -161,10 +126,11 @@ const About = () => {
 
 const AboutSection = styled.div`
   .first_view {
+    overflow: hidden;
     padding: 0 12rem;
     position: relative;
     background-color: #024c52;
-    height: 60vh;
+    height: 50vh;
     .body_part {
       padding-top: 5rem;
       display: flex;
@@ -173,7 +139,7 @@ const AboutSection = styled.div`
         flex: 2;
         color: white;
         span {
-          color: #f38799;
+          color: #f67e7e;
         }
       }
       .content {
@@ -186,17 +152,21 @@ const AboutSection = styled.div`
           width: 3rem;
           background-color: #d37db9;
         }
+        p {
+          font-size: 25px;
+          font-weight: bold;
+        }
       }
     }
     .home-2 {
       position: absolute;
-      right: 20%;
+      right: -5%;
       bottom: 0;
     }
   }
 
   .about_second_view {
-    background-color: #013e44;
+    background-color: #004047;
     position: relative;
     .image-2 {
       position: absolute;
@@ -216,7 +186,7 @@ const AboutSection = styled.div`
         .card {
           width: 70%;
           grid-column: span 4;
-          background-color: #163a37;
+          background-color: #012F34;
           padding: 2rem 0 0 0;
           border-radius: 0.1rem;
           display: flex;
@@ -226,21 +196,23 @@ const AboutSection = styled.div`
           h2 {
             margin: 0;
           }
-
           p {
             margin: 0 0 2em 0;
             font-style: italic;
           }
           button {
-            background-color: #f38799;
+            background-color: #f67e7e;
             padding: 0;
-            color: white;
+            color: #004047;
             border: none;
             border-radius: 50%;
             width: 3rem;
             height: 3rem;
-            cursor: pointer;
             margin-bottom: -1rem;
+          }
+          button:hover{
+            cursor: pointer;
+            background-color: #79c8c7;
           }
           .image_container {
             width: 100px;
@@ -299,14 +271,14 @@ const AboutSection = styled.div`
   }
   .pink_section {
     position: relative;
-    background-color: #f38799;
+    background-color: #f67e7e;
     height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     color: #012f33;
     button {
-      background-color: #f38799;
+      background-color: #f67e7e;
       border: 2px solid #012f33;
       color: #012f33;
     }
@@ -370,17 +342,27 @@ const AboutSection = styled.div`
       position: relative;
       background-color: #024c52;
       height: 70vh;
+      .short_line{
+        display: none;
+      }
       .body_part {
         padding-block: 5rem;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
+      .home-2 {
+      position: absolute;
+      right: -12%;
+      bottom: 0;
+    }
     }
 
     .about_second_view {
       background-color: #013e44;
       position: relative;
-
+      z-index: 10;
       .content {
         padding: 5rem 2rem;
         text-align: center;
@@ -389,12 +371,13 @@ const AboutSection = styled.div`
         }
         .card_collections {
           display: grid;
-          grid-template-columns: repeat(6, 1fr);
-          gap: 2rem;
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 3rem;
+          column-gap: 0.5rem;
           margin-block: 4rem;
           .card {
             width: 100%;
-            grid-column: span 3;
+            grid-column: span 1;
           }
           .social_icons {
             display: flex;
@@ -407,9 +390,11 @@ const AboutSection = styled.div`
 
     .about_third_section {
       padding: 0 6rem;
+      z-index: 1;
       height: 30vh;
       .image-4 {
-        width: 15%;
+        top: -25%;
+        width: 20%;
       }
       .contents {
         text-align: center;
@@ -435,6 +420,11 @@ const AboutSection = styled.div`
       }
       button {
         padding: 0.5rem 2rem;
+      }
+      img {
+        position: absolute;
+        left: 0;
+        bottom: -5%;
       }
     }
 
@@ -464,9 +454,10 @@ const AboutSection = styled.div`
   @media only screen and (max-width: 641px) {
     overflow: hidden;
     .first_view {
-      padding: 0 3rem;
+      padding: 0 2rem;
       position: relative;
-      height: 90vh;
+      height: 80vh;
+      z-index: 20;
       .body_part {
         padding-top: 2rem;
         flex-direction: column;
@@ -475,8 +466,9 @@ const AboutSection = styled.div`
         h1 {
           flex: 2;
           color: white;
+          margin: 0;
           span {
-            color: #f38799;
+            color: #f67e7e;
           }
         }
         .content {
@@ -493,10 +485,22 @@ const AboutSection = styled.div`
           }
         }
       }
+      .home-2 {
+        position: absolute;
+        right: -25%;
+        bottom: -11%;
+      }
     }
     .about_second_view {
       background-color: #013e44;
       position: relative;
+      z-index: 15;
+
+      .image-2 {
+      position: absolute;
+      top: -5%;
+      left: -5rem;
+    }
 
       .content {
         padding: 5rem 2rem;
@@ -507,7 +511,7 @@ const AboutSection = styled.div`
 
         .card_collections {
           display: grid;
-          grid-template-columns: repeat(6, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 2rem;
           margin-block: 4rem;
           .card {
@@ -523,24 +527,26 @@ const AboutSection = styled.div`
       }
     }
     .about_third_section {
-      padding: 0 12rem;
-      height: 30vh;
+      padding: 0 2rem;
       justify-content: space-between;
-
       .image-4 {
-        width: 20%;
+        top: -15%;
+        left: -20%;
+        width: 40%;
       }
+
       .contents {
         text-align: center;
+        padding: 0;
         h1 {
-          font-size: 20px;
+          font-size: 32px;
           margin-block: 2rem;
         }
         .partners {
-          display: flex;
+          flex-direction: column;
           align-items: center;
-          justify-content: space-around;
-          gap: 2em;
+          justify-content: center;
+        
           img {
             width: 35%;
           }
@@ -550,24 +556,25 @@ const AboutSection = styled.div`
 
     .pink_section {
       position: relative;
-      background-color: #f38799;
-      height: 30vh;
+      background-color: #f67e7e;
+      height: 20vh;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       color: #012f33;
+      text-align: center;
       h1 {
         font-size: 30px;
-        margin-block: 2rem;
+        width:50%;
       }
       button {
-        background-color: #f38799;
+        background-color: #f67e7e;
         border: 2px solid #012f33;
         color: #012f33;
       }
       img {
-        width: 20%;
+        width: 30%;
       }
     }
 
