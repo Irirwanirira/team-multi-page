@@ -23,33 +23,9 @@ const NavBar = () => {
               </li>
             </ul>
           </nav>
-          <button className="contactBtn">
-            <Link to="/contact">Contact us</Link>
-          </button>
-
-          <div className="menu">
-            <button className="menuContainer" onClick={toggleMenu}>
-              {!menuVisible ? (
-                <img src="/assets/icon-hamburger.svg" alt="Hamburger menu" />
-              ) : (
-                <img src="/assets/icon-close.svg" alt="close btn" />
-              )}
-            </button>
-
-            {menuVisible && (
-              <ul>
-                <li>
-                  <Link to="/">home</Link>
-                </li>
-                <li>
-                  <Link to="/about">about</Link>
-                </li>
-                <button className="contactBtn">
-                  <Link to="/contact">Contact us</Link>
-                </button>
-              </ul>
-            )}
-          </div>
+          {/* <button className="contactBtn"> */}
+            <Link to="/contact" className="contactBtn">Contact us</Link>
+          {/* </button> */}
         </div>
         <div className="small-menu">
           <nav className="navbar">
@@ -108,13 +84,22 @@ const NavbarSection = styled.div`
       }
     }
   }
-  .contactBtn a:hover {
-    background-color: none;
-    color: #002529;
+  .contactBtn {
+    border-radius: 30px;
+  border: 2px solid white;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 700;
+  color: #f9f9f9;
+  font-family: inherit;
+  background-color: #024c52;
+  cursor: pointer;
+    
   }
   .contactBtn:hover {
     background-color: white;
     color: #002529;
+    font-weight: bolder;
   }
 
   .menu {

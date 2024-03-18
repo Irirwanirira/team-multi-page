@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import styles from "../animations.module.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,10 +11,10 @@ const Footer = () => {
             <h1>myteam</h1>
             <ul className="links">
               <li>
-                <a href="/">home</a>
+                <Link to="/">home</Link>
               </li>
               <li>
-                <a href="/About">about</a>
+                <Link to="/about">about</Link>
               </li>
             </ul>
           </div>
