@@ -61,11 +61,8 @@ const Contact = () => {
   return (
     <ContactSection>
       <div>
-      
         <div className="first_view">
-
           <NavBar />
-          
           <div className="body_part">
             <div className="character">
               <h1>Contact</h1>
@@ -182,11 +179,11 @@ const Contact = () => {
 
 const ContactSection = styled.div`
   .first_view {
-    height: 80vh ;
+    height: 80vh;
     overflow: hidden;
     padding: 0 12rem;
     position: relative;
-    background-color: #014E56;
+    background-color: #014e56;
     .contact_1_image {
       position: absolute;
       left: -5%;
@@ -199,14 +196,14 @@ const ContactSection = styled.div`
 
       .character {
         flex: 2;
-        h1{
+        h1 {
           font: 64px;
         }
-        h2{
+        h2 {
           color: #f67e7e;
           font-size: 32px;
         }
-      
+
         .small_card {
           display: flex;
           align-items: center;
@@ -222,31 +219,32 @@ const ContactSection = styled.div`
           display: flex;
           flex-direction: column;
           gap: 2rem;
-          input, textarea{
-            background-color: #014E56;
+          input,
+          textarea {
+            background-color: #014e56;
             border: none;
             padding: 0.6rem;
             border-bottom: 1px solid white;
             outline: none;
             color: white;
           }
-          .errorMsg{
+          .errorMsg {
             color: #f67e7e;
             font-size: 12px;
             font-style: italic;
           }
 
-          .error{
+          .error {
             border-bottom: 1px solid #f67e7e;
           }
-          .error::placeholder{
+          .error::placeholder {
             color: #f67e7e;
           }
-          .valid{
-            border-bottom: 1px solid #79C8C7;
+          .valid {
+            border-bottom: 1px solid #79c8c7;
           }
 
-          button{
+          button {
             align-self: flex-start;
             background-color: #fff;
             color: #004047;
@@ -254,13 +252,12 @@ const ContactSection = styled.div`
         }
       }
     }
-    .contact_2_img{
+    .contact_2_img {
       position: absolute;
       right: -5%;
       bottom: 0;
     }
   }
-
 
   @media only screen and (min-width: 641px) and (max-width: 1007px) {
     .first_view {
@@ -278,7 +275,6 @@ const ContactSection = styled.div`
             font-size: 24px;
           }
           .small_card {
-            
             gap: 1rem;
             p {
               font-size: 16px;
@@ -287,7 +283,8 @@ const ContactSection = styled.div`
         }
         .form {
           form {
-            input, textarea {
+            input,
+            textarea {
               padding: 0.4rem;
             }
             button {
@@ -295,26 +292,57 @@ const ContactSection = styled.div`
             }
           }
         }
+      }
     }
   }
 
-  }
-  
-
-    @media only screen and (max-width: 640px) {
-
-      .first_view{
-          padding: 0 2rem;
-          
-          .character{
-            
-            .contact_1_image{
-              display: none;
+  @media only screen and (max-width: 640px) {
+    .first_view {
+      padding: 0 2rem;
+      height: 90vh;
+      .body_part {
+        flex-direction: column;
+        margin-top: 0;
+        .character {
+          h1 {
+            text-align: center;
+            font-size: 40px;
+            margin: 0;
+          }
+          h2 {
+            text-align: center;
+            font-size: 32px;
+            margin: 0.5rem 0;
+          }
+          .small_card {
+            gap: 1rem;
+            p {
+              font-size: 16px;
             }
           }
+        }
+
+        .form {
+          width: 100%;
+          margin: 2rem 0;
+          form {
+            input,
+            textarea {
+              padding: 0.4rem;
+            }
+            button {
+              padding: 0.4rem 1rem;
+            }
+          }
+        }
       }
-    
+      .contact_2_img {
+        right: -15%;
+        bottom: -8%;
+        width: 30%;
+      }
     }
+  }
 `;
 
 export default Contact;

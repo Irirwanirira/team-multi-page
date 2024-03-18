@@ -107,9 +107,9 @@ const FooterSection = styled.div`
       }
     }
     .icon:hover {
-        cursor: pointer;
-        filter: grayscale(100%) brightness(1) sepia(100%) hue-rotate(0deg)
-        saturate(100%) contrast(1); 
+      cursor: pointer;
+      filter: grayscale(100%) brightness(1) sepia(100%) hue-rotate(0deg)
+        saturate(100%) contrast(1);
     }
   }
 

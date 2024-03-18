@@ -1,7 +1,31 @@
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
-import styles from '../animations.module.css'
+import styles from "../animations.module.css";
 import Footer from "../components/Footer";
+
+const data = [
+  {
+    name: " Kady Baker",
+    image: "/assets/avatar-kady.jpg",
+    position: "Product Manager at Bookmark",
+    description:
+      " “The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.”",
+  },
+  {
+    name: "Aiysha Reese",
+    image: "/assets/avatar-aiysha.jpg",
+    position: "Founder of Manage",
+    description:
+      "“We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”",
+  },
+  {
+    name: "Arthur Clarke",
+    image: "/assets/avatar-arthur.jpg",
+    position: "Co-founder of MyPhysio",
+    description:
+      "“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”",
+  },
+];
 
 const Home = () => {
   return (
@@ -15,14 +39,17 @@ const Home = () => {
           />
           <NavBar />
           <div className="body_part">
-            <h1 >
-              Find the best <span >talent</span>
+            <h1>
+              Find the best <span>talent</span>
             </h1>
             <div className="content">
-              <div className={`${styles.rotateLines} ${styles.animate} ${styles.animateInfinite} ${styles.animateOrigin} short_line`}>
-              </div>
+              <div
+                className={`${styles.rotateLines} ${styles.animate} ${styles.animateInfinite} ${styles.animateOrigin} short_line`}
+              ></div>
               <p>
-              Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.
+                Finding the right people and building high performing teams can
+                be hard. Most companies aren’t tapping into the abundance of
+                global talent. We’re about to change that.
               </p>
             </div>
           </div>
@@ -34,7 +61,9 @@ const Home = () => {
         </div>
         <div className="second_view">
           <div className="build_side">
-            <div className={`${styles.rotateLines} ${styles.animate} ${styles.animateInfinite} ${styles.animationSlow} short_line`}></div>
+            <div
+              className={`${styles.rotateLines} ${styles.animate} ${styles.animateInfinite} ${styles.animationSlow} short_line`}
+            ></div>
             <h2>Build & manage distributed teams like no one else.</h2>
           </div>
           <div className="character">
@@ -98,60 +127,22 @@ const Home = () => {
             <span>success stories</span>
           </h1>
           <div className="middle_content">
-            <div className="card">
-              <img
-                src="/assets/icon-quotes.svg"
-                alt="Quotations"
-                className="quotes"
-              />
-              <p className="text">
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
-                quisquam quod error accusantium quos accusamus, rerum minus
-                maiores culpa aperiam veritatis sit repudiandae sunt quidem ad?
-                Facere ipsam molestiae quaerat eos.
-              </p>
-              <h4> Kady Baker</h4>
-              <p className="position">Product designer at Bookmark</p>
-              <div className="image_container">
-                <img src="/assets/avatar-kady.jpg" alt="avatar image" />
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src="/assets/icon-quotes.svg"
-                alt="Quotations"
-                className="quotes"
-              />
-              <p className="text">
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
-                quisquam quod error accusantium quos accusamus, rerum minus
-                maiores culpa aperiam veritatis sit repudiandae sunt quidem ad?
-                Facere ipsam molestiae quaerat eos.
-              </p>
-              <h4> Kady Baker</h4>
-              <p className="position">Product designer at Bookmark</p>
-              <div className="image_container">
-                <img src="/assets/avatar-kady.jpg" alt="avatar image" />
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src="/assets/icon-quotes.svg"
-                alt="Quotations"
-                className="quotes"
-              />
-              <p className="text">
-                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim
-                quisquam quod error accusantium quos accusamus, rerum minus
-                maiores culpa aperiam veritatis sit repudiandae sunt quidem ad?
-                Facere ipsam molestiae quaerat eos.
-              </p>
-              <h4> Kady Baker</h4>
-              <p className="position">Product designer at Bookmark</p>
-              <div className="image_container">
-                <img src="/assets/avatar-kady.jpg" alt="avatar image" />
-              </div>
-            </div>
+            {data &&
+              data.map((item, index) => (
+                <div className="card" key={index}>
+                  <img
+                    src="/assets/icon-quotes.svg"
+                    alt="Quotations"
+                    className="quotes"
+                  />
+                  <p className="text">{item.description}</p>
+                  <h4> {item.name}</h4>
+                  <p className="position">{item.position}</p>
+                  <div className="image_container">
+                    <img src={item.image} alt="avatar image" />
+                  </div>
+                </div>
+              ))}
           </div>
           <img
             src="/assets/bg-pattern-home-5.svg"
@@ -210,6 +201,10 @@ const HomeSection = styled.div`
           width: 3rem;
           background-color: #79cbc7;
         }
+        p {
+          color: white;
+          font-weight: bolder;
+        }
       }
     }
     .home-2 {
@@ -258,7 +253,7 @@ const HomeSection = styled.div`
     .home-3 {
       position: absolute;
       right: 0;
-      bottom: 0
+      bottom: 0;
     }
   }
 
@@ -338,7 +333,7 @@ const HomeSection = styled.div`
       border: 2px solid #012f33;
       color: #012f33;
     }
-    button:hover{
+    button:hover {
       background-color: #012f33;
       color: #fff;
     }
@@ -352,7 +347,7 @@ const HomeSection = styled.div`
   @media only screen and (min-width: 641px) and (max-width: 1007px) {
     .first_view {
       padding: 0 2rem;
-      height: 80vh;
+      height: 60vh;
       .home-1 {
         display: none;
       }
@@ -416,7 +411,7 @@ const HomeSection = styled.div`
     .pink_section {
       padding: 3rem;
       justify-content: space-around;
-      h1{
+      h1 {
         font-size: 30px;
       }
       button {
@@ -426,7 +421,6 @@ const HomeSection = styled.div`
   }
 
   @media only screen and (max-width: 640px) {
-    
     .first_view {
       padding: 0 1rem;
       .home-1 {
@@ -456,7 +450,7 @@ const HomeSection = styled.div`
       overflow: hidden;
       .build_side {
         max-width: 70%;
-        .short_line{
+        .short_line {
           height: 0.5rem;
           width: 3.5rem;
         }
@@ -468,24 +462,24 @@ const HomeSection = styled.div`
         text-align: center;
         margin: auto;
         max-width: 100%;
-        .small_card{
+        .small_card {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           margin-top: 1rem;
           margin: auto;
-     
-          .title{
+
+          .title {
             font-size: 1.5em;
             font-weight: bold;
           }
-          .content{
+          .content {
             font-size: 1.5em;
           }
         }
       }
-      .home-3{
+      .home-3 {
         top: 0;
         right: -15%;
       }
@@ -505,7 +499,7 @@ const HomeSection = styled.div`
           .text {
             width: 100%;
           }
-          .image_container{
+          .image_container {
             width: 5rem;
             height: 5rem;
             padding: 0.2rem;
@@ -518,7 +512,7 @@ const HomeSection = styled.div`
       flex-direction: column;
       text-align: center;
       z-index: 5;
-      h1{
+      h1 {
         font-size: 30px;
         max-width: 50%;
       }
@@ -529,7 +523,6 @@ const HomeSection = styled.div`
         width: 35%;
       }
     }
-    
   }
 `;
 

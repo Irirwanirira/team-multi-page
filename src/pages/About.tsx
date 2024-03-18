@@ -2,6 +2,34 @@ import styled from "styled-components";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
+const data = [
+  {
+    name: "Nikita Marks",
+    position: " Founder & CEO",
+    image: "/assets/avatar-nikita.jpg",
+  },
+  {
+    name: "Cristian Duncan",
+    position: "Co-founder & COO",
+    image: "assets/avatar-christian.jpg",
+  },
+  {
+    name: "Cruz Hamer",
+    position: "Co-founder & CTO",
+    image: "/assets/avatar-cruz.jpg",
+  },
+  {
+    name: "Drake Heaton",
+    position: "Business Development Lead",
+    image: "/assets/avatar-drake.jpg",
+  },
+  {
+    name: "Griffin Wise",
+    position: "Lead Marketing",
+    image: "/assets/avatar-griffin.jpg",
+  },
+];
+
 const About = () => {
   return (
     <AboutSection>
@@ -13,11 +41,19 @@ const About = () => {
             <div className="content">
               <div className="short_line"></div>
               <p>
-                We help companies build dynamic teams made up of top global talent. Using our network of passionate professionals we drive innovation and deliver incredible outcomes. Talented, diverse teams shape the best products and experiences. We’ll bring those teams to you.
+                We help companies build dynamic teams made up of top global
+                talent. Using our network of passionate professionals we drive
+                innovation and deliver incredible outcomes. Talented, diverse
+                teams shape the best products and experiences. We’ll bring those
+                teams to you.
               </p>
             </div>
           </div>
-          <img src="/assets/bg-pattern-about-1-mobile-nav-1.svg" alt="about_2-image" className="home-2"/>
+          <img
+            src="/assets/bg-pattern-about-1-mobile-nav-1.svg"
+            alt="about_2-image"
+            className="home-2"
+          />
         </div>
         <div className="about_second_view">
           <img
@@ -28,50 +64,17 @@ const About = () => {
           <div className="content">
             <h1>Meet the directors</h1>
             <div className="card_collections">
-              <div className="card">
-                <div className="image_container">
-                  <img src="/assets/avatar-cruz.jpg" alt="avatar-cruz" />
+              {data.map((item, index) => (
+                <div className="card" key={index}>
+                  <div className="image_container">
+                    <img src={item.image} alt={item.name} />
+                  </div>
+                  <h2>{item.name}</h2>
+                  <p>{item.position}</p>
+                  <button>+</button>
                 </div>
+              ))}
 
-                <h2>Cruz Hamer</h2>
-                <p>COO</p>
-                <button>+</button>
-              </div>
-              <div className="card">
-                <div className="image_container">
-                  <img
-                    src="/assets/avatar-christian.jpg"
-                    alt="avatar-christian"
-                  />
-                </div>
-                <h2 className="name">Christian Watts</h2>
-                <p className="position">CTO</p>
-                <button>+</button>
-              </div>
-              <div className="card">
-                <div className="image_container">
-                  <img src="/assets/avatar-cruz.jpg" alt="avatar-cruz" />
-                </div>
-                <h2>Cruz Hamer</h2>
-                <p>COO</p>
-                <button>+</button>
-              </div>
-              <div className="card">
-                <div className="image_container">
-                  <img src="/assets/avatar-cruz.jpg" alt="avatar-cruz" />
-                </div>
-                <h2>Cruz Hamer</h2>
-                <p>COO</p>
-                <button>+</button>
-              </div>
-              <div className="card">
-                <div className="image_container">
-                  <img src="/assets/avatar-cruz.jpg" alt="avatar-cruz" />
-                </div>
-                <h2>Cruz Hamer</h2>
-                <p>COO</p>
-                <button>+</button>
-              </div>
               <div className="card">
                 <h2>Cruz Hamer</h2>
                 <p>
@@ -82,7 +85,17 @@ const About = () => {
                   <img src="/assets/icon-facebook.svg" alt="facebook" />
                   <img src="/assets/icon-twitter.svg" alt="twitter" />
                 </div>
-                <button>x</button>
+                <button
+                  onMouseEnter={(e: any) => {
+                    e.target.style.backgroundColor = "#f67e7e";
+                  }}
+                  onMouseLeave={(e: any) => {
+                    e.target.style.backgroundColor = "#79c8c7";
+                  }}
+                  style={{ backgroundColor: "#79c8c7" }}
+                >
+                  x
+                </button>
               </div>
             </div>
           </div>
@@ -101,11 +114,11 @@ const About = () => {
           <div className="contents">
             <h1>Some of our clients</h1>
             <div className="partners">
-              <img src="/assets/logo-the-verge.png" alt="" />
-              <img src="/assets/logo-jakarta-post.png" alt="" />
-              <img src="/assets/logo-the-guardian.png" alt="" />
-              <img src="/assets/logo-tech-radar.png" alt="" />
-              <img src="/assets/logo-gadgets-now.png" alt="" />
+              <img src="/assets/logo-the-verge.png" alt="The verge" />
+              <img src="/assets/logo-jakarta-post.png" alt="Jakarta post" />
+              <img src="/assets/logo-the-guardian.png" alt=" THe guardian" />
+              <img src="/assets/logo-tech-radar.png" alt="Tech radar" />
+              <img src="/assets/logo-gadgets-now.png" alt="gadgets" />
             </div>
           </div>
         </section>
@@ -118,7 +131,7 @@ const About = () => {
           <h1>Ready to get started? </h1>
           <button>contact us</button>
         </section>
-          <Footer />
+        <Footer />
       </div>
     </AboutSection>
   );
@@ -186,7 +199,7 @@ const AboutSection = styled.div`
         .card {
           width: 70%;
           grid-column: span 4;
-          background-color: #012F34;
+          background-color: #012f34;
           padding: 2rem 0 0 0;
           border-radius: 0.1rem;
           display: flex;
@@ -210,7 +223,7 @@ const AboutSection = styled.div`
             height: 3rem;
             margin-bottom: -1rem;
           }
-          button:hover{
+          button:hover {
             cursor: pointer;
             background-color: #79c8c7;
           }
@@ -282,7 +295,7 @@ const AboutSection = styled.div`
       border: 2px solid #012f33;
       color: #012f33;
     }
-    button:hover{
+    button:hover {
       background-color: #012f33;
       color: #fff;
     }
@@ -346,7 +359,7 @@ const AboutSection = styled.div`
       position: relative;
       background-color: #024c52;
       height: 70vh;
-      .short_line{
+      .short_line {
         display: none;
       }
       .body_part {
@@ -357,10 +370,10 @@ const AboutSection = styled.div`
         text-align: center;
       }
       .home-2 {
-      position: absolute;
-      right: -12%;
-      bottom: 0;
-    }
+        position: absolute;
+        right: -12%;
+        bottom: 0;
+      }
     }
 
     .about_second_view {
@@ -460,7 +473,7 @@ const AboutSection = styled.div`
     .first_view {
       padding: 0 2rem;
       position: relative;
-      height: 80vh;
+      height: 65vh;
       z-index: 20;
       .body_part {
         padding-top: 2rem;
@@ -501,10 +514,10 @@ const AboutSection = styled.div`
       z-index: 15;
 
       .image-2 {
-      position: absolute;
-      top: -5%;
-      left: -5rem;
-    }
+        position: absolute;
+        top: -5%;
+        left: -5rem;
+      }
 
       .content {
         padding: 5rem 2rem;
@@ -550,7 +563,7 @@ const AboutSection = styled.div`
           flex-direction: column;
           align-items: center;
           justify-content: center;
-        
+
           img {
             width: 35%;
           }
@@ -570,7 +583,7 @@ const AboutSection = styled.div`
       text-align: center;
       h1 {
         font-size: 30px;
-        width:50%;
+        width: 50%;
       }
       button {
         background-color: #f67e7e;
