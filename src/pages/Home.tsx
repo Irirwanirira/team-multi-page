@@ -74,38 +74,35 @@ const Home = () => {
                 className="icon_holder"
               />
               <div>
-                <p className="title">Experience individual</p>
+                <p className="title">Experienced Individuals</p>
                 <p className="content">
-                  Our network is made up of highly experienced professionals who
-                  are passionate about what they do
+                Our network is made up of highly experienced professionals who are passionate about what they do.
                 </p>
               </div>
             </div>
             <div className="small_card">
               <img
-                src="/assets/icon-person.svg"
+                src="/assets/icon-cog.svg"
                 alt=""
                 className="icon_holder"
               />
               <div>
                 <p className="title">Easy to implement</p>
                 <p className="content">
-                  Our network is made up of highly experienced professionals who
-                  are passionate about what they do
+                Our processes have been refined over years of implementation meaning our teams always deliver.
                 </p>
               </div>
             </div>
             <div className="small_card">
               <img
-                src="/assets/icon-person.svg"
+                src="/assets/icon-chart.svg"
                 alt=""
                 className="icon_holder"
               />
               <div>
-                <p className="title">Enhance Productivity</p>
+                <p className="title">Enhanced Productivity</p>
                 <p className="content">
-                  Our network is made up of highly experienced professionals who
-                  are passionate about what they do
+                  Our customized platform with in-built analytics helps you manage your distributed teams.
                 </p>
               </div>
             </div>
@@ -247,6 +244,9 @@ const HomeSection = styled.div`
           color: #f67e7e;
         }
         .content {
+        }
+        div{
+          font-weight: bolder;
         }
       }
     }
