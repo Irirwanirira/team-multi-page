@@ -473,7 +473,7 @@ const AboutSection = styled.div`
     .first_view {
       padding: 0 2rem;
       position: relative;
-      height: 65vh;
+      height: 100vh;
       z-index: 20;
       .body_part {
         padding-top: 2rem;

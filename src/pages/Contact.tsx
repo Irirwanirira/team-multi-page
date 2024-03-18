@@ -299,7 +299,7 @@ const ContactSection = styled.div`
   @media only screen and (max-width: 640px) {
     .first_view {
       padding: 0 2rem;
-      height: 95vh;
+      height: max-content;
       .body_part {
         flex-direction: column;
         margin-top: 0;

@@ -422,13 +422,17 @@ const HomeSection = styled.div`
 
   @media only screen and (max-width: 640px) {
     .first_view {
-      padding: 0 1rem;
+
+      padding: 0 2rem;
+      height: 100vh;
       .home-1 {
         display: none;
       }
       .body_part {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        padding-top: 8rem;
         h1 {
           max-width: 70%;
           margin: 0;
@@ -438,6 +442,8 @@ const HomeSection = styled.div`
         .content {
           max-width: 100%;
           text-align: center;
+          padding-top: 3rem;
+
           .short_line {
             display: none;
           }
