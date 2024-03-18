@@ -338,6 +338,10 @@ const HomeSection = styled.div`
       border: 2px solid #012f33;
       color: #012f33;
     }
+    button:hover{
+      background-color: #012f33;
+      color: #fff;
+    }
     .home_5 {
       position: absolute;
       left: 0;

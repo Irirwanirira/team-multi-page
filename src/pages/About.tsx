@@ -130,7 +130,7 @@ const AboutSection = styled.div`
     padding: 0 12rem;
     position: relative;
     background-color: #024c52;
-    height: 50vh;
+    height: 60vh;
     .body_part {
       padding-top: 5rem;
       display: flex;
@@ -150,7 +150,7 @@ const AboutSection = styled.div`
         div {
           height: 3px;
           width: 3rem;
-          background-color: #d37db9;
+          background-color: #f67e7e;
         }
         p {
           font-size: 25px;
@@ -281,6 +281,10 @@ const AboutSection = styled.div`
       background-color: #f67e7e;
       border: 2px solid #012f33;
       color: #012f33;
+    }
+    button:hover{
+      background-color: #012f33;
+      color: #fff;
     }
     img {
       position: absolute;

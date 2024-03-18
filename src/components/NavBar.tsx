@@ -15,24 +15,21 @@ const NavBar = () => {
           <h1>myteam</h1>
           <ul>
             <li>
-              <a href="/">home</a>
+              <Link to="/">home</Link>
             </li>
             <li>
-              <a href="/about">about</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
+              <Link to="/about">about</Link>
             </li>
           </ul>
         </nav>
-        <button className="contactBtn">Contact us</button>
+        <button className="contactBtn"><Link to="/contact">Contact us</Link></button>
 
         <div className="menu">
           <button className="menuContainer" onClick={toggleMenu}>
             {!menuVisible ? (
-              <img src="../../assets/icon-hamburger.svg" alt="" />
+              <img src="/assets/icon-hamburger.svg" alt="Hamburger menu" />
             ) : (
-              <img src="../../assets/icon-close.svg" alt="" />
+              <img src="/assets/icon-close.svg" alt="close btn" />
             )}
           </button>
 
@@ -44,6 +41,7 @@ const NavBar = () => {
               <li>
                 <Link to="/about">about</Link>
               </li>
+              <button className="contactBtn"><Link to="/contact">Contact us</Link></button>
             </ul>
           )}
         </div>
@@ -74,8 +72,15 @@ const NavbarSection = styled.div`
         margin: 0 1rem;
       }
     }
+    
   }
-  .contactBtn {
+  .contactBtn a:hover {
+    background-color: none;
+    color: #002529;
+  }
+  .contactBtn:hover{
+    background-color: white;
+    color: #002529;
   }
 
   .menu {
