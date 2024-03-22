@@ -23,9 +23,7 @@ const NavBar = () => {
               </li>
             </ul>
           </nav>
-          {/* <button className="contactBtn"> */}
             <Link to="/contact" className="contactBtn">Contact us</Link>
-          {/* </button> */}
         </div>
         <div className="small-menu">
           <nav className="navbar">
